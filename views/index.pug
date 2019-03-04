@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  html.
+    <form action="/payment" method="post" id="payment-form">
+      <div class="form-row">
+        <label for="card-element">
+          Credit or debit card
+        </label>
+        <div id="card-element">
+          <!-- A Stripe Element will be inserted here. -->
+        </div>
+
+        <!-- Used to display form errors. -->
+        <div id="card-errors" role="alert"></div>
+      </div>
+
+      <button>Submit Payment</button>
+    </form>
+
+    <a href="https://connect.stripe.com/oauth/authorize?response_type=code&client_id=ca_EbQCBLXkWfzeNfBIuOEOfeWFsNeFHMS6&scope=read_write">Connect</a>
+    <script src="js/app.js"></script>
